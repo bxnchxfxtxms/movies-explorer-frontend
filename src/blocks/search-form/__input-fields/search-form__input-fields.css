@@ -1,0 +1,6 @@
+.search-form__input-fields {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: grid;
+}

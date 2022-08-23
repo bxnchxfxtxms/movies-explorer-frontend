@@ -1,0 +1,14 @@
+.main__social-media-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.main__social-media-link:last-child {
+  margin-right: 0;
+}

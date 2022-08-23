@@ -1,0 +1,29 @@
+.about-project__paragraph-container {
+  display: flex;
+  flex-direction: column;
+  width: 42.96875vw;
+  margin-right: 40px;
+}
+
+.about-project__paragraph-container:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__paragraph-container {
+    width: 41.5364vw;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__paragraph-container {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+
+  .about-project__paragraph-container:last-child {
+    margin-bottom: 0;
+  }
+}

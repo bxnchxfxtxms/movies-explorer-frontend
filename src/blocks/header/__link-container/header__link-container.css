@@ -1,0 +1,21 @@
+.header__link-container {
+  margin: 21px 5.46875vw 0 0;
+}
+
+@media screen and (min-width: 1280px) { 
+  .header__link-container {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) { 
+  .header__link-container {
+    margin-right: 3.90625vw;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .header__link-container {
+    margin: 24px 4.375vw 0 0;
+  }
+}

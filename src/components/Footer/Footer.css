@@ -1,0 +1,17 @@
+.Footer {
+  display: grid;
+  grid-template-areas:
+  'title title'
+  'copyright links';
+  margin: 79px 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .Footer {
+    grid-template-areas:
+    'title'
+    'links'
+    'copyright';
+    margin-bottom: 10px;
+  }
+}

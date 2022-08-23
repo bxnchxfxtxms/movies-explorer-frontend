@@ -1,0 +1,12 @@
+.search-form__short-film-switch-container {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .search-form__short-film-switch-container {
+    margin-top: 44px;
+  }
+}

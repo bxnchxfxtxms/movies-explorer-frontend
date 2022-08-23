@@ -1,0 +1,4 @@
+.movies-card__movie-picture {
+  width: 100%;
+  grid-area: picture;
+}

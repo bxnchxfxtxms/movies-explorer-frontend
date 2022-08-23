@@ -1,0 +1,9 @@
+.header__movie-link_active {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .header__movie-link_active {
+    border-bottom: 2px #000 solid;
+  }
+}

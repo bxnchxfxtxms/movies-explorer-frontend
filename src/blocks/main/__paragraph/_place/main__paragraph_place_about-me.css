@@ -1,0 +1,22 @@
+.main__paragraph_place_about-me {
+  line-height: 22px;
+  margin: 26px 0 99px;
+  width: 46.875vw;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  .main__paragraph_place_about-me {
+    line-height: 18px;
+    margin: 20px 0 87px;
+    width: 47.39583vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main__paragraph_place_about-me {
+    line-height: 16px;
+    margin-bottom: 40px;
+    width: 91.25vw;
+  }
+}

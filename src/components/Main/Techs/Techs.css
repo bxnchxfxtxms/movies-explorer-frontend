@@ -1,0 +1,20 @@
+.Techs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f5f5f5;
+  align-items: center;
+  padding: 100px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .Techs {
+    padding: 90px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Techs {
+    padding: 70px 0;
+  }
+}

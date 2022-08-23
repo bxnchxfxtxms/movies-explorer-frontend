@@ -1,0 +1,12 @@
+.main__list_place_footer {
+  justify-self: end;
+}
+
+@media screen and (max-width: 500px) {
+  .main__list_place_footer {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,7 @@
+@media screen and (max-width: 700px) {
+  .main__list_place_techs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px
+  }
+}

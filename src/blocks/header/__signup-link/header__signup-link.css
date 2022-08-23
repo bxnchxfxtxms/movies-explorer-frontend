@@ -1,0 +1,14 @@
+.header__signup-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 500px) {
+  .header__signup-link {
+    font-size: 10px;
+  }
+}
