@@ -10,26 +10,20 @@ class Portfolio extends React.Component {
         </h4>
       <ul className="portfolio__list">
         <li className="portfolio__list-item">
-          <a className="portfolio__link opacity-animation" href="https://bxnchxfxtxms.github.io/how-to-learn/" rel="noreferrer" target="_blank">
+          <a className="portfolio__link opacity-animation" href="https://github.com/bxnchxfxtxms/how-to-learn" rel="noreferrer" target="_blank">
             Статичный сайт
-          </a>
-          <a className="portfolio__link" href="https://bxnchxfxtxms.github.io/how-to-learn/" rel="noreferrer" target="_blank">
             <img className="portfolio__link-arrow opacity-animation" src={linkArrow} alt="Стрелка"/>
           </a>
         </li>
         <li className="portfolio__list-item">
           <a className="portfolio__link opacity-animation" href="https://bxnchxfxtxms.github.io/russian-travel/" rel="noreferrer" target="_blank">
             Адаптивный сайт
-          </a>
-          <a className="portfolio__link" href="https://bxnchxfxtxms.github.io/russian-travel/" rel="noreferrer" target="_blank">
             <img className="portfolio__link-arrow opacity-animation" src={linkArrow} alt="Стрелка"/>
           </a>
         </li>
         <li className="portfolio__list-item">
-          <a className="portfolio__link opacity-animation" href="https://mest0.students.nomoredomains.xyz/" rel="noreferrer" target="_blank">
+          <a className="portfolio__link opacity-animation" href="https://github.com/bxnchxfxtxms/react-mesto-api-full" rel="noreferrer" target="_blank">
             Одностраничное приложение
-          </a>
-          <a className="portfolio__link" href="https://mest0.students.nomoredomains.xyz/" rel="noreferrer" target="_blank">
             <img className="portfolio__link-arrow opacity-animation" src={linkArrow} alt="Стрелка"/>
           </a>
         </li>

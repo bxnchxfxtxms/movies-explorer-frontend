@@ -16,7 +16,7 @@ class MoviesCardList extends React.Component {
               />
             ))}
           </ul>
-        <button className="movies-card-list__more-button opacity-animation opacity-animation_type_darkening">
+        <button type="button" className="movies-card-list__more-button opacity-animation opacity-animation_type_darkening">
           Ещё
         </button>
       </section>

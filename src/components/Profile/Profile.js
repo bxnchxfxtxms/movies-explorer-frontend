@@ -23,10 +23,10 @@ class Profile extends React.Component {
             pochta@yandex.ru
           </p>
         </div>
-        <button className="profile__button opacity-animation">
+        <button type="button" className="profile__button opacity-animation">
           Редактировать
         </button>
-        <button className="profile__button profile__button_color_red opacity-animation">
+        <button type="button" className="profile__button profile__button_color_red opacity-animation">
           Выйти из аккаунта
         </button>
       </section>

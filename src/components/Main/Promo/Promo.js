@@ -11,7 +11,7 @@ class Promo extends React.Component {
         <ul className="main__list">
           <li className="main__list-item main__list-item_place_promo">
             <AnchorLink to="#AboutProject">
-              <button className="
+              <button type="button" className="
               main__list-button
               main__list-button_place_promo
               opacity-animation
@@ -23,7 +23,7 @@ class Promo extends React.Component {
           </li>
           <li className="main__list-item main__list-item_place_promo">
             <AnchorLink to="#Techs">
-              <button className="
+              <button type="button" className="
               main__list-button
               main__list-button_place_promo
               opacity-animation
@@ -35,7 +35,7 @@ class Promo extends React.Component {
           </li>
           <li className="main__list-item main__list-item_place_promo">
             <AnchorLink to="#AboutMe">
-              <button className="
+              <button type="button" className="
               main__list-button
               main__list-button_place_promo
               opacity-animation

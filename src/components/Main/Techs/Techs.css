@@ -16,5 +16,6 @@
 @media screen and (max-width: 500px) {
   .Techs {
     padding: 70px 0;
+    background-color: #fff;
   }
 }

@@ -16,9 +16,7 @@ class Navigation extends React.Component {
             destination='/saved-movies'
           />
         </nav>
-        {/* <Link className="header__account-link opacity-animation opacity-animation_type_darkening" to='/profile'>Аккаунт</Link> */}
         <ProfileLink/>
-        {/* <button className="header__menu-button opacity-animation"></button> */}
       </div>
     )
   }

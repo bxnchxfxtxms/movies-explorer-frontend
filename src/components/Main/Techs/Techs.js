@@ -16,37 +16,37 @@ class Techs extends React.Component {
         </p>
         <ul className="main__list main__list_place_techs">
           <li className="main__list-item main__list-item_place_techs">
-            <button className="main__list-button main__list-button_place_techs">
+            <button type="button" className="main__list-button main__list-button_place_techs">
               HTML
             </button>
           </li>
           <li className="main__list-item main__list-item_place_techs">
-            <button className="main__list-button main__list-button_place_techs">
+            <button type="button" className="main__list-button main__list-button_place_techs">
               CSS
             </button>
           </li>
           <li className="main__list-item main__list-item_place_techs">
-            <button className="main__list-button main__list-button_place_techs">
+            <button type="button" className="main__list-button main__list-button_place_techs">
               JS
             </button>
           </li>
           <li className="main__list-item main__list-item_place_techs">
-            <button className="main__list-button main__list-button_place_techs">
+            <button type="button" className="main__list-button main__list-button_place_techs">
               React
             </button>
           </li>
           <li className="main__list-item main__list-item_place_techs">
-            <button className="main__list-button main__list-button_place_techs">
+            <button type="button" className="main__list-button main__list-button_place_techs">
               Git
             </button>
           </li>
           <li className="main__list-item main__list-item_place_techs">
-            <button className="main__list-button main__list-button_place_techs">
+            <button type="button" className="main__list-button main__list-button_place_techs">
               Express.js
             </button>
           </li>
           <li className="main__list-item main__list-item_place_techs">
-            <button className="main__list-button main__list-button_place_techs">
+            <button type="button" className="main__list-button main__list-button_place_techs">
               mongoDB
             </button>
           </li>

@@ -6,7 +6,7 @@ class MoviesCard extends React.Component {
       <li className="MoviesCard">
         <h2 className="movies-card__movie-title">33 слова о дизайне</h2>
         <p className="movies-card__movie-duration">1ч 47м</p>
-        <button className={`
+        <button type="button" className={`
           movies-card__bookmark-button
           ${this.props.isBookmarked ? 'movies-card__bookmark-button_type_bookmarked' : ''}
           ${this.props.path === '/saved-movies' ? 'movies-card__bookmark-button_type_saved' : ''}`}></button>

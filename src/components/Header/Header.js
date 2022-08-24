@@ -15,7 +15,7 @@ class Header extends React.Component {
               Регистрация
             </Link>
             <Link to='/signin'>
-              <button className="header__signin-button opacity-animation">
+              <button type="button" className="header__signin-button opacity-animation">
                 Войти
               </button>
             </Link>
