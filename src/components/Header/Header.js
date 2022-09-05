@@ -9,30 +9,47 @@ class Header extends React.Component {
     return (
       <header className="Header">
         <Logo/>
-        <Route exact path='/'>
-          <div className="header__link-container">
-            <Link className="header__signup-link opacity-animation" to='/signup'>
-              Регистрация
-            </Link>
-            <Link to='/signin'>
-              <button type="button" className="header__signin-button opacity-animation">
-                Войти
-              </button>
-            </Link>
-          </div>
-        </Route>
-        <Route path='/movies'>
+        {!this.props.loggedIn &&
+          <Route exact path='/'>
+            <div className="header__link-container">
+              <Link className="header__signup-link opacity-animation" to='/signup'>
+                Регистрация
+              </Link>
+              <Link to='/signin'>
+                <button type="button" className="header__signin-button opacity-animation">
+                  Войти
+                </button>
+              </Link>
+            </div>
+          </Route>}
+        {this.props.loggedIn &&
+          <Route exact path='/'>
+            <Navigation/>
+            <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
+          </Route>}
+        {this.props.loggedIn &&
+        <Route path='/profile'>
           <Navigation/>
           <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
-        </Route>
-        <Route path='/profile'>
+        </Route>}
+        {this.props.loggedIn &&
+          <Route path='/movies'>
+            <Navigation/>
+            <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
+          </Route>}
+        {this.props.loggedIn &&
+        <Route path='/saved-movies'>
+          <Navigation/>
+          <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
+        </Route>}
+        {/* <Route path='/profile'>
           <Navigation/>
           <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
         </Route>
         <Route path='/saved-movies'>
           <Navigation/>
           <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
-        </Route>
+        </Route> */}
       </header>
     )
   }

@@ -1,10 +1,12 @@
-.profile__button_color_red {
-  background-color: transparent;
-  color: #f00;
-  font-weight: 500;
-  margin: 0 0 70px;
-  width: auto;
-  height: auto;
+.profile__fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 410px;
+  align-items: center;
+  margin: 74px 0 0;
+  padding: 0;
+  border: none;
 }
 
 @media screen and (max-width: 768px) {
