@@ -1,0 +1,11 @@
+.search-form__switch-caption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 500px) {
+  .search-form__switch-caption {
+    font-size: 11px;
+  }
+}

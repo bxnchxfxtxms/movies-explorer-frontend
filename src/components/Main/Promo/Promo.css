@@ -1,0 +1,27 @@
+.Promo {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  min-height: 493px;
+  width: 96.87vw;
+  max-width: 1200px;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) { 
+  .Promo {
+    min-height: 108.59375vw;
+    width: 96.7916vw;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .Promo {
+    margin-top: 14px;
+    min-height: 586px;
+    width: 91.25vw;
+  }
+}

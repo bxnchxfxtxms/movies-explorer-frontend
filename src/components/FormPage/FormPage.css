@@ -1,0 +1,20 @@
+.FormPage {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0;
+  width: 396px;
+}
+
+@media screen and (max-width: 768px) {
+  .FormPage {
+    margin: 232px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .FormPage {
+    margin: 56px 0 30px;
+    width: 260px;
+    align-items: center;
+  }
+}

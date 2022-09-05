@@ -1,0 +1,18 @@
+.about-project__week-counter {
+  display: flex;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  min-height: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__week-counter {
+    min-height: 35px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}

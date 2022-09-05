@@ -1,0 +1,12 @@
+.Navigation {
+  width: 58.28125vw;
+  display: flex;
+  justify-content: space-between;
+  max-width: 746px;
+}
+
+@media screen and (max-width: 768px) {
+  .Navigation {
+    display: none;
+  }
+}

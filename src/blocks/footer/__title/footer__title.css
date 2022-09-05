@@ -1,0 +1,30 @@
+.footer__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #a0a0a0;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 20px;
+  margin: 0 0 20px;
+  width: 89.07vw;
+  max-width: 1140px;
+  text-align: center;
+  grid-area: title;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__title {
+    width: 92.1875vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__title {
+    margin-bottom: 30px;
+    width: 93.75vw;
+    font-size: 12px;
+    line-height: 15px;
+    padding-bottom: 21px;
+  }
+}

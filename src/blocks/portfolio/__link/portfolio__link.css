@@ -1,0 +1,24 @@
+.portfolio__link {
+  display: flex;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__link {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio__link {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

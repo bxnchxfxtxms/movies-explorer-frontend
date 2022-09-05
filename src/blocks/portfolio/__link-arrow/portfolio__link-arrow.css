@@ -1,0 +1,15 @@
+.portfolio__link-arrow {
+  width: 17px;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__link-arrow {
+    width: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio__link-arrow {
+    width: 11px;
+  }
+}

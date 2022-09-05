@@ -1,0 +1,19 @@
+.PageNotFound {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  align-items: center;
+  margin: 246px 0 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .PageNotFound {
+    margin: 408px 0 222px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .PageNotFound {
+    margin: 329px 0 30px;
+  }
+}

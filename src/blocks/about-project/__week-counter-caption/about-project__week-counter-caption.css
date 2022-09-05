@@ -1,0 +1,22 @@
+.about-project__week-counter-caption {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 14px 0 110px;
+  color: #a0a0a0;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__week-counter-caption {
+    margin-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__week-counter-caption {
+    margin: 10px 0 70px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}

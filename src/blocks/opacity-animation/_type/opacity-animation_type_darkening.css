@@ -1,0 +1,8 @@
+/* .opacity-animation_type_darkening {
+  transition: .1s linear;
+} */
+
+.opacity-animation_type_darkening:hover {
+  opacity: 1;
+  background-color: #d0d0d0;
+}

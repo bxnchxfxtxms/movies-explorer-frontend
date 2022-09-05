@@ -1,0 +1,13 @@
+.main__list-button_place_promo {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 500px) { 
+  .main__list-button_place_promo {
+    margin-bottom: 17px;
+    width: 25.625vw;
+    min-height: 26px;
+    border-radius: 6px;
+    font-size: 10px;
+  }
+}

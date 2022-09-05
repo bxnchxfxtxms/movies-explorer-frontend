@@ -1,0 +1,22 @@
+.about-me__student-photo {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me__student-photo {
+    width: 255px;
+    height: 307px;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-me__student-photo {
+    width: 292px;
+    height: 352px;
+    align-self: center;
+  }
+}

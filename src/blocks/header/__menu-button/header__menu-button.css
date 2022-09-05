@@ -1,0 +1,25 @@
+.header__menu-button {
+  margin: 15px 3.90624999vw 0 0;
+  background-image: url(../../../images/movies-menu-button.svg);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  
+}
+
+@media screen and (min-width: 769px) {
+  .header__menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__menu-button {
+    margin: 15px 4.375vw 0 0;
+    width: 40px;
+    height: 43px;
+  }
+}

@@ -1,0 +1,15 @@
+.about-me__student-info-container {
+  display: flex;
+  flex-direction: row;
+  margin: 66px 0 0;
+  max-width: 1140px;
+  width: 89.07vw;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+  .about-me__student-info-container {
+    margin-top: 60px;
+    flex-direction: column-reverse;
+  }
+}

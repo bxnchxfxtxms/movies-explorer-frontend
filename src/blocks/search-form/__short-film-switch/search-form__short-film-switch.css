@@ -1,0 +1,39 @@
+.search-form__short-film-switch {
+  margin-right: 12px;
+  width: 36px;
+  min-height: 20px;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+  background-color: #d0d0d0;
+  appearance: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-form__short-film-switch:after {
+  content: ""; 
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.search-form__short-film-switch:checked {
+  background-color: #2be080;
+}
+
+.search-form__short-film-switch:checked:after {
+  left: 22px;
+}
+
+@media screen and (max-width: 500px) {
+  .search-form__short-film-switch {
+    margin-right: 13px;
+  }
+}

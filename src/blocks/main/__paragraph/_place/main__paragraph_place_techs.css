@@ -1,0 +1,19 @@
+.main__paragraph_place_techs {
+  display: flex;
+  width: 460px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .main__paragraph_place_techs {
+    margin: 22px 0 83px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main__paragraph_place_techs {
+    margin: 24px 0 50px;
+    width: 91.25vw;
+  }
+}

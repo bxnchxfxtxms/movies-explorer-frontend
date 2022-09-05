@@ -1,0 +1,21 @@
+.about-project__paragraph-containers {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  width: 89.07vw;
+  max-width: 1140px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__paragraph-containers {
+    width: 86.979716vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__paragraph-containers {
+    margin-top: 60px;
+    width: 88.75vw;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,18 @@
+.movies-card__bookmark-button {
+  padding: 0;
+  margin: 19px 14px 19px 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../../images/movies-card-bookmark-button.svg);
+  border: none;
+  cursor: pointer;
+  grid-area: button;
+  justify-self: end;
+  border-radius: 50%;
+  transition: ease-in .3s;
+}
+
+.movies-card__bookmark-button:hover {
+  transform: scale(1.03);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.07)
+}

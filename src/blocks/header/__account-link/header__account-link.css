@@ -1,0 +1,33 @@
+.header__account-link {
+  display: flex;
+  width: 100px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  margin: 15px 5.46875vw 0 0;
+}
+
+@media screen and (min-width: 1280px) { 
+  .header__account-link {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__account-link {
+    margin: 621px 0 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__account-link {
+    margin: 444px 0 46px;
+  }
+}

@@ -1,0 +1,14 @@
+.main__list-button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  width: 96px;
+  text-align: center;
+  min-height: 36px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+}

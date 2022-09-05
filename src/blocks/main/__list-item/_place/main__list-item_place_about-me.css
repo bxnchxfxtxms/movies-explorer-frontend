@@ -1,0 +1,9 @@
+.main__list-item_place_about-me {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .main__list-item_place_about-me {
+    margin-right: 26px;
+  }
+}

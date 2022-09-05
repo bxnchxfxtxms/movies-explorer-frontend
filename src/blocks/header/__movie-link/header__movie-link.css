@@ -1,0 +1,28 @@
+.header__movie-link {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #000;
+  margin-right: 16px;
+}
+
+.header__movie-link:nth-child(3) {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__movie-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 4px;
+    margin: 0 0 22px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__movie-link {
+    margin: 0 0 15px;
+  }
+}

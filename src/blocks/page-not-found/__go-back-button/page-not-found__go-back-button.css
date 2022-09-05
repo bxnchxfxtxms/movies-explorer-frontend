@@ -1,0 +1,15 @@
+.page-not-found__go-back-button {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 184px 0 0;
+}
+
+@media screen and (max-width: 500px) {
+  .page-not-found__go-back-button {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

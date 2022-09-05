@@ -1,0 +1,15 @@
+.navigation-popup-menu__container {
+  position: relative;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 67.7083vw;
+  background-color: #fff;
+  z-index: 1;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .navigation-popup-menu__container {
+    width: 100vw;
+  }
+}
