@@ -66,5 +66,6 @@ class Auth {
 }
 
 export const auth = new Auth({
-  baseUrl: 'http://localhost:3000',
+  // baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://api.m0viesexpl0rer.nomoredomains.xyz',
 })

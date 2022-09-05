@@ -67,6 +67,7 @@ class App extends React.Component {
   }
 
   removeLocalStorageData = () => {
+    localStorage.removeItem('movies')
     localStorage.removeItem('found-movies')
     localStorage.removeItem('short-film-switch-state')
     localStorage.removeItem('key-word')
@@ -148,7 +149,7 @@ class App extends React.Component {
       this.setLocalStorageData(data)
       const localMovies = localStorage.getItem('movies')
       this.setState({
-        movies: findMovies(JSON.parse(localMovies), data.word, data.isShortFilmSwitchActive === 'true' ? true : false)
+        movies: findMovies(JSON.parse(localMovies), data.word, data.isShortFilmSwitchActive)
       })
     })
     .catch((err) => {
@@ -175,8 +176,8 @@ class App extends React.Component {
   }
   
   handleFindSavedMovies = data => {
-    console.log("Switch state for movie search: ", data.isShortFilmSwitchActive === 'true' ? true : false)
-    console.log("Switch state: ", data.isShortFilmSwitchActive)
+    // console.log("Switch state for movie search: ", data.isShortFilmSwitchActive === 'true' ? true : false)
+    // console.log("Switch state: ", data.isShortFilmSwitchActivcde)
     this.handleSetKeyWord(data.word)
     this.setState({
       isSearchInitialized: true,
@@ -372,6 +373,10 @@ class App extends React.Component {
     auth.handleLogout()
     .then(() => {
     this.setState({
+      isShortFilmSwitchActive: false,
+      movies: [],
+      savedMovies: [],
+      foundMovies: [],
       currentUser: {},
       loggedIn: false,
       email: ''

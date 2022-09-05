@@ -25,7 +25,7 @@ class SavedMovies extends React.Component {
             &&
             !this.props.isMovieSearchFailed
             ) &&
-            <h1>Ничего не найдено</h1>
+            <span className="notification notification_place_movies-list">Ничего не найдено</span>
           }
         <MoviesCardList
           isSearchInitialized={this.props.isSearchInitialized}
