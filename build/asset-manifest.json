@@ -1,27 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0cc69a86.css",
-    "main.js": "/static/js/main.2b9c93d7.js",
+    "main.css": "/static/css/main.1d74018b.css",
+    "main.js": "/static/js/main.1aa009eb.js",
     "static/js/787.5fef94a4.chunk.js": "/static/js/787.5fef94a4.chunk.js",
-    "static/media/movie-9.jpg": "/static/media/movie-9.6e83fa83f842e369476d.jpg",
-    "static/media/movie-8.jpg": "/static/media/movie-8.6aa8f3a2f097917a0891.jpg",
     "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/static/media/Inter-Black.c6938660eec019fefd68.woff",
     "static/media/Inter-Regular.woff": "/static/media/Inter-Regular.8c206db99195777c6769.woff",
-    "static/media/movie-5.jpg": "/static/media/movie-5.d9a0e611159832435efd.jpg",
-    "static/media/movie-6.jpg": "/static/media/movie-6.6fd8c8a62b557b411450.jpg",
     "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
     "static/media/Inter-Black.woff2": "/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
-    "static/media/movie-4.jpg": "/static/media/movie-4.a8efa1ffa4b6e649770d.jpg",
-    "static/media/movie-12.jpg": "/static/media/movie-12.2225f2813324bea26029.jpg",
-    "static/media/movie-11.jpg": "/static/media/movie-11.97991c617a7fbe27e452.jpg",
-    "static/media/movie-2.jpg": "/static/media/movie-2.ba380bc08ee4d0cc9d55.jpg",
-    "static/media/movie-1.jpg": "/static/media/movie-1.3e92375ebd0ecac3e4cb.jpg",
-    "static/media/movie-10.jpg": "/static/media/movie-10.b0ec9f272ea2545e9ae6.jpg",
     "static/media/student-image.jpeg": "/static/media/student-image.1dd41640774aad36e2e9.jpeg",
-    "static/media/movie-3.jpg": "/static/media/movie-3.36b2c5c61efa7317091a.jpg",
-    "static/media/movie-7.jpg": "/static/media/movie-7.7ab13c662788c1abfa2d.jpg",
     "index.html": "/index.html",
     "static/media/movies-card-bookmark-button.svg": "/static/media/movies-card-bookmark-button.10be8b30c06e2d9bfb16.svg",
     "static/media/movies-card-bookmark-button-active.svg": "/static/media/movies-card-bookmark-button-active.bf1e0b7033e313a04e12.svg",
@@ -30,12 +18,13 @@
     "static/media/movies-menu-button.svg": "/static/media/movies-menu-button.08035af1e508cd8cfed5.svg",
     "static/media/navigation-popup-menu-close-button.svg": "/static/media/navigation-popup-menu-close-button.5e1f5ab08e09a43b778a.svg",
     "static/media/about-me-link-arrow.svg": "/static/media/about-me-link-arrow.62cc3d1841c06c3215777dfa2eec9a57.svg",
-    "main.0cc69a86.css.map": "/static/css/main.0cc69a86.css.map",
-    "main.2b9c93d7.js.map": "/static/js/main.2b9c93d7.js.map",
+    "static/media/popup-close-button-icon.svg": "/static/media/popup-close-button-icon.2ceb783afbab75916ddc.svg",
+    "main.1d74018b.css.map": "/static/css/main.1d74018b.css.map",
+    "main.1aa009eb.js.map": "/static/js/main.1aa009eb.js.map",
     "787.5fef94a4.chunk.js.map": "/static/js/787.5fef94a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0cc69a86.css",
-    "static/js/main.2b9c93d7.js"
+    "static/css/main.1d74018b.css",
+    "static/js/main.1aa009eb.js"
   ]
 }

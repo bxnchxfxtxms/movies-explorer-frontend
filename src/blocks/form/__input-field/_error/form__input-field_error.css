@@ -1,0 +1,7 @@
+.form__input-field_error {
+  color: #f00;
+}
+
+.form__input-field_error:focus {
+  outline-color: #f00;
+}

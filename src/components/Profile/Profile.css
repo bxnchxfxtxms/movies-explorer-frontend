@@ -4,10 +4,9 @@
   width: 100%;
   max-width: 1280px;
   align-items: center;
-  margin: 74px 0 70px;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .Profile {
     margin: 236px 0 269px; 
   }
@@ -17,4 +16,4 @@
   .Profile {
     margin: 70px 0 40px; 
   }
-}
+} */

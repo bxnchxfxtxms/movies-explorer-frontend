@@ -1,4 +1,19 @@
 .movies-card__movie-picture {
+  height: 203px;
   width: 100%;
   grid-area: picture;
+  object-fit: cover;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-card__movie-picture {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .movies-card__movie-picture {
+    height: 168px;
+  }
 }

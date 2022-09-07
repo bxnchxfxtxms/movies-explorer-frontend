@@ -1,5 +1,20 @@
 .profile__button_color_red {
+  background-color: transparent;
   color: #f00;
   font-weight: 500;
-  margin: 0;
+  margin: 0 0 70px;
+  width: auto;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__fieldset {
+    margin: 236px 0 0; 
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__fieldset {
+    margin: 70px 0 0; 
+  }
 }
