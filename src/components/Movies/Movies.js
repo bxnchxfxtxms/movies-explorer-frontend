@@ -22,6 +22,7 @@ class Movies extends React.Component {
           onShortFilmSwitchChange={this.props.onShortFilmSwitchChange}
           isShortFilmSwitchActive={this.props.isShortFilmSwitchActive}
           keyWord={this.props.keyWord}
+          onFindShortMovies={this.props.onFindShortMovies}
           onFindMovies={this.props.onFindMovies}/>
         {this.props.renderLoader && 
           <Preloader/>

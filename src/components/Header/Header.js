@@ -42,14 +42,6 @@ class Header extends React.Component {
           <Navigation/>
           <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
         </Route>}
-        {/* <Route path='/profile'>
-          <Navigation/>
-          <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
-        </Route>
-        <Route path='/saved-movies'>
-          <Navigation/>
-          <button className="header__menu-button opacity-animation" type="button" onClick={this.props.onMenuClick}></button>
-        </Route> */}
       </header>
     )
   }

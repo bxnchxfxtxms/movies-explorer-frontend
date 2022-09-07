@@ -18,6 +18,7 @@ class SavedMovies extends React.Component {
           isShortFilmSwitchActive={this.props.isShortFilmSwitchActive}
           keyWord={this.props.keyWord}
           onFindSavedMovies={this.props.onFindSavedMovies}
+          onFindSavedShortMovies={this.props.onFindSavedShortMovies}
           path={this.props.path}/>
           {(this.props.foundedSavedMovies.length <= 0
             &&

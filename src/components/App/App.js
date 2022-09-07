@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer'
 import Profile from '../Profile/Profile'
 import Register from '../Register/Register'
 import Login from '../Login/Login'
+import InfoTooltip from '../InfoTooltip/InfoTooltip'
 import PageNotFound from '../PageNotFound/PageNotFound'
 import NavigationPopupMenu from '../NavigationPopupMenu/NavigationPopupMenu'
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
@@ -42,14 +43,14 @@ class App extends React.Component {
       foundedSavedMovies: [],
       width: window.innerWidth,
       cardCounter: getInitialCount(window.innerWidth),
-      email: ''
+      email: '',
+      isInfoTooltipOpen: false
     }
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.resizeListener)
     this.setUserInfo()
-    console.log(this.state.loggedIn)
   }
   
   componentDidUpdate() {
@@ -60,9 +61,9 @@ class App extends React.Component {
     window.removeEventListener('resize', this.resizeListener)
   }
 
-  setLocalStorageData = (data) => {
-    localStorage.setItem('found-movies', JSON.stringify(findMovies(JSON.parse(localStorage.getItem('movies')), data.word, data.isShortFilmSwitchActive === 'true' ? true : false)))
-    localStorage.setItem('short-film-switch-state', JSON.stringify(!data.isShortFilmSwitchActive))
+  setLocalStorageData = (data, shortSwitchState) => {
+    localStorage.setItem('found-movies', JSON.stringify(findMovies(JSON.parse(localStorage.getItem('movies')), data.word, shortSwitchState)))
+    localStorage.setItem('short-film-switch-state', JSON.stringify(shortSwitchState))
     localStorage.setItem('key-word', data.word)
   }
 
@@ -94,6 +95,7 @@ class App extends React.Component {
   setUserInfo = () => {
     auth.getUserInfo()
     .then(userData => {
+      console.log(userData)
       if (userData._id) {
         this.setState({
           currentUser: {
@@ -120,25 +122,40 @@ class App extends React.Component {
     })
   }
   
-  getAllMovies = (data) => {
+  getAllMovies = (data, shortSwitchState) => {
     const localMovies = localStorage.getItem('movies')
     if (localMovies) {
       try {
         this.setState({
-          movies: findMovies(JSON.parse(localMovies), data.word, data.isShortFilmSwitchActive)
+          movies: findMovies(JSON.parse(localMovies), data.word, shortSwitchState)
         })
         this.resetMovieSearchFailure()
-        this.setLocalStorageData(data)
+        this.setLocalStorageData(data, shortSwitchState)
       } catch(err) {
         localStorage.removeItem('movies')
-        this.fetchMoives(data)
+        this.fetchMoives(data, shortSwitchState)
       }
     } else {
-      this.fetchMovies(data)
+      this.fetchMovies(data, shortSwitchState)
     }
   }
+
+  filterShortMovies = (data, shortSwitchState) => {
+      const localMovies = localStorage.getItem('movies')
+      if (localMovies) {
+        try {
+          this.setState({
+            movies: findMovies(JSON.parse(localMovies), localStorage.getItem('key-word'), shortSwitchState)
+          })
+          this.resetMovieSearchFailure()
+          this.setLocalStorageData(data, shortSwitchState)
+        } catch(err) {
+          console.log(err)
+        }
+      }
+  }
   
-  fetchMovies = (data) => {
+  fetchMovies = (data, shortSwitchState) => {
     this.setState({
       renderLoader: true
     })
@@ -146,10 +163,10 @@ class App extends React.Component {
     .then((res) => {
       this.resetMovieSearchFailure()
       localStorage.setItem('movies', JSON.stringify(res))
-      this.setLocalStorageData(data)
+      this.setLocalStorageData(data, shortSwitchState)
       const localMovies = localStorage.getItem('movies')
       this.setState({
-        movies: findMovies(JSON.parse(localMovies), data.word, data.isShortFilmSwitchActive)
+        movies: findMovies(JSON.parse(localMovies), data.word, shortSwitchState)
       })
     })
     .catch((err) => {
@@ -165,25 +182,40 @@ class App extends React.Component {
     })
   }
   
-  handleFindMovies = data => {
+  handleFindMovies = (data, shortSwitchState) => {
     this.getSavedMovies()
     this.setState({
-      isSearchInitialized: true
+      isSearchInitialized: true,
+      cardCounter: getInitialCount(window.innerWidth)
     })
-    console.log(this.state)
     this.handleSetKeyWord(data.word)
-    this.getAllMovies(data)
+    this.getAllMovies(data, shortSwitchState)
+  }
+
+  handleFindShortMovies = (data, shortSwitchState) => {
+    this.resetSearchInitializer()
+    this.getSavedMovies()
+    this.setState({
+      cardCounter: getInitialCount(window.innerWidth)
+    })
+    this.filterShortMovies(data, !shortSwitchState)
   }
   
-  handleFindSavedMovies = data => {
-    // console.log("Switch state for movie search: ", data.isShortFilmSwitchActive === 'true' ? true : false)
-    // console.log("Switch state: ", data.isShortFilmSwitchActivcde)
+  handleFindSavedMovies = (data, shortSwitchState) => {
     this.handleSetKeyWord(data.word)
     this.setState({
       isSearchInitialized: true,
-      foundedSavedMovies: findMovies(this.state.savedMovies, data.word, data.isShortFilmSwitchActive)
+      foundedSavedMovies: findMovies(this.state.savedMovies, data.word, shortSwitchState)
     })
-    console.log(this.state)
+  }
+  
+  handleFindSavedShortMovies = (data, shortSwitchState) => {
+    if (this.state.isSearchInitialized) {
+    this.handleSetKeyWord(data.word)
+    this.setState({
+      isSearchInitialized: true,
+      foundedSavedMovies: findMovies(this.state.savedMovies, data.word, !shortSwitchState)
+    })}
   }
 
   handleSetKeyWord = word => {
@@ -229,6 +261,12 @@ class App extends React.Component {
     })
   }
 
+  handleCloseInfoTooltip = () => {
+    this.setState({
+      isInfoTooltipOpen: false
+    })
+  }
+
   handleBookmarkMovie = movie => {
     const isBookmarked = this.state.savedMovies.some(savedMovie => savedMovie.movieId === movie.id)
     const movieToRemove = this.state.savedMovies.find(savedMovie => savedMovie.movieId === movie.id)
@@ -267,7 +305,6 @@ class App extends React.Component {
   }
 
   handleChangeShortSwitchState = data => {
-    // console.log('current switch state: ', !data)
     this.setState({
       isShortFilmSwitchActive: data === 'true' ? true : false,
     })
@@ -344,6 +381,9 @@ class App extends React.Component {
     mainApi.editUserInfo(newUserData)
     .then(userData => {
       this.handleSetUserData(userData)
+      this.setState({
+        isInfoTooltipOpen: true
+      })
     })
     .catch(err => { 
       console.log(err)
@@ -382,7 +422,7 @@ class App extends React.Component {
       email: ''
     })
     this.removeLocalStorageData()
-    this.props.history.push('/signin')
+    this.props.history.push('/')
     })
     .catch(err => { 
       console.log(err)
@@ -423,6 +463,7 @@ class App extends React.Component {
                   isShortFilmSwitchActive={this.state.isShortFilmSwitchActive}
                   keyWord={this.state.keyWord}
                   onFindMovies={this.handleFindMovies}
+                  onFindShortMovies={this.handleFindShortMovies}
                   renderLoader={this.state.renderLoader}
                   cardCounter={this.state.cardCounter}
                   movies={this.state.movies}
@@ -453,6 +494,7 @@ class App extends React.Component {
                 isShortFilmSwitchActive={this.state.isShortFilmSwitchActive}
                 keyWord={this.state.keyWord}
                 onFindSavedMovies={this.handleFindSavedMovies}
+                onFindSavedShortMovies={this.handleFindSavedShortMovies}
                 renderLoader={this.state.renderLoader}
                 cardCounter={this.state.cardCounter}
                 movies={this.state.movies}
@@ -476,6 +518,10 @@ class App extends React.Component {
               <Profile
                 onEditProfile={this.handleUpdateProfile}
                 onLogoutClick={this.handleLogout}
+              />
+              <InfoTooltip
+                isOpen={this.state.isInfoTooltipOpen}
+                onClose={this.handleCloseInfoTooltip}
               />
             </ProtectedRoute>
             <Route path="/signup">

@@ -80,6 +80,7 @@
 @import url(./blocks/search-form/__short-film-switch-container/search-form__short-film-switch-container.css);
 @import url(./blocks/search-form/__field/search-form__field.css);
 @import url(./blocks/search-form/__submit-button/search-form__submit-button.css);
+@import url(./blocks/search-form/__submit-button/_disabled/search-form__submit-button_disabled.css);
 @import url(./blocks/search-form/__short-film-switch/search-form__short-film-switch.css);
 @import url(./blocks/search-form/__switch-caption/search-form__switch-caption.css);
 @import url(./components/Movies/MoviesCardList/MoviesCardList.css);
@@ -100,6 +101,7 @@
 @import url(./blocks/profile/__user-data-container/profile__user-data-container.css);
 @import url(./blocks/profile/__user-data-line/profile__user-data-line.css);
 @import url(./blocks/profile/__user-data-line/_weight/profile__user-data-line_weight_medium.css);
+@import url(./blocks/profile/__user-data-line/_error/profile__user-data-line_error.css);
 @import url(./blocks/profile/__button/profile__button.css);
 @import url(./blocks/profile/__button/_color/profile__button_color_red.css);
 @import url(./blocks/profile/__button/_disabled/profile__button_disabled.css);
@@ -128,6 +130,8 @@
 
 @import url(./blocks/notification/notification.css);
 @import url(./blocks/notification/_place/notification_place_movies-list.css);
+@import url(./blocks/notification/_place/notification_place_search-form.css);
+@import url(./blocks/notification/_place/notification_place_profile.css);
 
 @import url(./components/NavigationPopupMenu/NavigationPopupMenu.css);
 
@@ -143,6 +147,12 @@
 @import url(./blocks/footer/__title/footer__title.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
 @import url(./blocks/main/__list-item/_place/main__list-item_place_footer.css);
+
+@import url(./blocks/info-tooltip/info-tooltip.css);
+@import url(./blocks/info-tooltip/_opened/info-tooltip_opened.css);
+@import url(./blocks/info-tooltip/__container/info-tooltip__container.css);
+@import url(./blocks/info-tooltip/__close-button/info-tooltip__close-button.css);
+@import url(./blocks/info-tooltip/__register-confirm-message/info-tooltip__register-confirm-message.css);
 
 @import url(./blocks/opacity-animation/opacity-animation.css);
 @import url(./blocks/opacity-animation/_type/opacity-animation_type_darkening.css);

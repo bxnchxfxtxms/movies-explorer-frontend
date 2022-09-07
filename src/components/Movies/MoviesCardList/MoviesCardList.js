@@ -6,37 +6,6 @@ class MoviesCardList extends React.Component {
   render() {
     return (
       <section className="MoviesCardList">
-          {/* {this.props.path === '/saved-movies' ? (
-            <ul className="movies-card-list__list">
-              {this.props.savedMovies.slice(0, this.props.cardCounter).map(movie => (
-                <MoviesCard
-                  savedMovies={this.props.savedMovies}
-                  movieData={movie}
-                  onDeleteIconClick={this.props.onDeleteIconClick}
-                  duration={movie.duration}
-                  title={movie.nameRU}
-                  key={movie._id}
-                  image={movie.image}
-                  path={this.props.path}
-                />
-              ))}
-            </ul>
-          ) : (
-            <ul className="movies-card-list__list">
-            {this.props.movies.slice(0, this.props.cardCounter).map(movie => (
-              <MoviesCard
-                savedMovies={this.props.savedMovies}
-                movieData={movie}
-                onBookmarkIconClick={this.props.onBookmarkIconClick}
-                duration={movie.duration}
-                title={movie.nameRU}
-                key={movie.id}
-                image={movie.image}
-                path={this.props.path}
-              />
-            ))}
-          </ul>
-          )} */}
         {(this.props.path === '/saved-movies' && !this.props.isSearchInitialized) &&
           <ul className="movies-card-list__list">
             {this.props.savedMovies.map(movie => (

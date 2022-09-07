@@ -5,9 +5,9 @@ class SearchForm extends React.Component {
     super(props)
     this.state = {
       word: '',
-      // isShortFilmSwitchActive: this.props.isShortFilmSwitchActive === 'true' ? true : false,
-      isShortFilmSwitchActive: this.props.isShortFilmSwitchActive,
-      isSearchInitiaized: false
+      isShortFilmSwitchActive: this.props.isShortFilmSwitchActive === 'true' ? true : false,
+      isSearchInitiaized: false,
+      isButtonDisabled: true
     }
   }
 
@@ -15,7 +15,7 @@ class SearchForm extends React.Component {
     this.props.path === '/saved-movies'
     ?
     this.setState({
-      word: '',
+      word: null,
       isShortFilmSwitchActive: false,
     })
     :
@@ -28,7 +28,8 @@ class SearchForm extends React.Component {
   handleChange = event => {
     const { name, value } = event.target
     this.setState({
-      [name]: value
+      [name]: value,
+      isButtonDisabled: false
     })
   }
 
@@ -57,15 +58,23 @@ class SearchForm extends React.Component {
   handleMovieSearch = () => {
     this.props.path === '/saved-movies'
     ?
-    this.props.onFindSavedMovies(this.state)
+    this.props.onFindSavedMovies(this.state, this.state.isShortFilmSwitchActive)
     :
-    this.props.onFindMovies(this.state)
+    this.props.onFindMovies(this.state, this.state.isShortFilmSwitchActive)
+  }
+
+  handleShortMovieSearch = () => {
+    this.props.path === '/saved-movies'
+    ?
+    this.props.onFindSavedShortMovies(this.state, this.state.isShortFilmSwitchActive)
+    :
+    this.props.onFindShortMovies(this.state, this.state.isShortFilmSwitchActive)
   }
 
   handleShortFilmSwitchClick = () => {
     this.handleShortMovieSwitchToggle()
     this.props.onShortFilmSwitchChange(!this.state.isShortFilmSwitchActive)
-    this.handleMovieSearch()
+    this.handleShortMovieSearch()
   }
   
   handleSubmit = event => {
@@ -76,7 +85,11 @@ class SearchForm extends React.Component {
   render() {
     return (
       <section className="SearchForm">
-        <form onSubmit={this.handleSubmit} className="search-form">
+        <form
+          onSubmit={this.handleSubmit}
+          className="search-form"
+          noValidate
+        >
           <fieldset className="search-form__input-fields">
             <div className="search-form__search-form-container">
               <input
@@ -89,12 +102,14 @@ class SearchForm extends React.Component {
                 onChange={this.handleChange}
                 placeholder="Фильм"/>
               <button
-                className="search-form__submit-button opacity-animation"
+                className={`search-form__submit-button ${this.state.isButtonDisabled || this.state.word === '' ? `form__submit-button_disabled` : `opacity-animation`}`}
                 type="submit"
+                disabled={this.state.isButtonDisabled || this.state.word === ''}
                 name="find">
                   Найти
               </button>
             </div>
+            <span className="notification notification_place_search-form">{ this.state.word === '' ? 'Нужно ввести ключевое слово' : ''}</span>
             <div className="search-form__short-film-switch-container">
               <input
                 className="search-form__short-film-switch"

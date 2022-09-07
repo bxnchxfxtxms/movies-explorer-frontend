@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4de6f544.css",
-    "main.js": "/static/js/main.ef0ea5df.js",
+    "main.css": "/static/css/main.1d74018b.css",
+    "main.js": "/static/js/main.1aa009eb.js",
     "static/js/787.5fef94a4.chunk.js": "/static/js/787.5fef94a4.chunk.js",
     "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -18,12 +18,13 @@
     "static/media/movies-menu-button.svg": "/static/media/movies-menu-button.08035af1e508cd8cfed5.svg",
     "static/media/navigation-popup-menu-close-button.svg": "/static/media/navigation-popup-menu-close-button.5e1f5ab08e09a43b778a.svg",
     "static/media/about-me-link-arrow.svg": "/static/media/about-me-link-arrow.62cc3d1841c06c3215777dfa2eec9a57.svg",
-    "main.4de6f544.css.map": "/static/css/main.4de6f544.css.map",
-    "main.ef0ea5df.js.map": "/static/js/main.ef0ea5df.js.map",
+    "static/media/popup-close-button-icon.svg": "/static/media/popup-close-button-icon.2ceb783afbab75916ddc.svg",
+    "main.1d74018b.css.map": "/static/css/main.1d74018b.css.map",
+    "main.1aa009eb.js.map": "/static/js/main.1aa009eb.js.map",
     "787.5fef94a4.chunk.js.map": "/static/js/787.5fef94a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4de6f544.css",
-    "static/js/main.ef0ea5df.js"
+    "static/css/main.1d74018b.css",
+    "static/js/main.1aa009eb.js"
   ]
 }
